@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+header nav a:link {
+    color: #6c6760;
+}
+
+header nav a:visited {
+    color: #ada08f;
+}
+
+header nav a:hover {
+    color: #dedcdc;
+}
+
+header nav a:active {
+    color: #9f907d;
+}
+
+.hidden {
+    /*    display: none;*/
+    /*    transform: scale(0);*/
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+
+header nav {
+    color: black;
+    text-align: right;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 7px;
+    text-align: center;
+    flex-direction: row;
+}
+
+#menuknap {
+    display: inline-block;
+    font-size: 2rem;
+    color: #a59a8c;
+    margin: 1vw 1vw;
+}
+
+#menu a {
+    display: block;
+    /* This makes the menu vertical */
+}
+
+#menu {
+    list-style-type: none;
+    transition: transform .3s;
+    font-family: sans-serif;
+    transform-origin: top right;
+}
+
+@media only screen and (min-width: 700px) {
+
+    #menuknap {
+        display: none;
+    }
+
+    .hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu a {
+        display: inline-block;
+        font-size: 1.3rem;
+        /* This makes the menu horisontal */
+    }
+}
+
+
+#splash {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(billeder/splash.png);
+    background-size: cover;
+    background-position: 20%;
+    max-width: none;
+}
