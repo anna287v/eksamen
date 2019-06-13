@@ -10,8 +10,10 @@ img {
     width: 100%;
 }
 
+/*BURGERMENU*/
+
 header nav a:link {
-    color: #6c6760;
+    color: #ada08f;
 }
 
 header nav a:visited {
@@ -19,7 +21,7 @@ header nav a:visited {
 }
 
 header nav a:hover {
-    color: #dedcdc;
+    color: gray;
 }
 
 header nav a:active {
@@ -27,14 +29,11 @@ header nav a:active {
 }
 
 .hidden {
-    /*    display: none;*/
-    /*    transform: scale(0);*/
     transform: translateX(100%);
     opacity: 0;
 }
 
 header {
-    position: fixed;
     left: 0;
     width: 100%;
     top: 0;
@@ -87,12 +86,12 @@ header nav a {
 
     #menu a {
         display: inline-block;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         /* This makes the menu horisontal */
     }
 }
 
-
+/*STARTSIDE*/
 #splash {
     width: 100vw;
     height: 100vh;
@@ -100,4 +99,51 @@ header nav a {
     background-size: cover;
     background-position: 20%;
     max-width: none;
+}
+
+/*PORTFOLIO*/
+#portfolio {
+    background-color: #f0e5d4;
+}
+
+.billede {
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70vw;
+    margin-left: -10vw;
+    margin-top: -30vw;
+}
+
+#portfolio .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+#portfolio .col {
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 25px;
+    align-content: center;
+}
+
+.lastcol {}
+
+.col img {
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all .8s ease-in-out;
+}
+
+.col img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
 }
