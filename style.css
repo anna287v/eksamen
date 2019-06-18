@@ -206,19 +206,37 @@ header nav a {
 h1 {
     text-align: center;
     font-family: sans-serif;
-    color: #9f907d;
+    color: #8d7f70;
 }
 
 h2 {
     text-align: center;
     font-family: sans-serif;
-    color: #9f907d;
+    color: #8d7f70;
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #b1a290;
+}
+
+h4 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #b1a290;
 }
 
 p {
     font-family: sans-serif;
-    color: #6c665e;
-    letter-spacing: 2px;
+    color: #675e53;
+    /*letter-spacing: 2px;*/
+}
+
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #c9b8a6;
 }
 
 /*SOMMERSURF*/
@@ -240,17 +258,14 @@ p {
     flex-grow: 1;
     padding: 0 15px;
     align-content: center;
-    width: 100%;
-    display: block;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 700px) {
 
     .content {
         margin: 2;
-        max-width: 800px;
         align-content: center;
-
     }
-
 }
