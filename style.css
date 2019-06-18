@@ -11,7 +11,6 @@ img {
 }
 
 /*BURGERMENU*/
-
 header nav a:link {
     color: #ada08f;
 }
@@ -28,7 +27,6 @@ header nav a:active {
     color: #9f907d;
 }
 
-
 header {
     width: 100%;
     top: 4vw;
@@ -44,7 +42,7 @@ header nav {
 header nav a {
     text-decoration: none;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
     padding: 7px;
     text-align: center;
@@ -62,13 +60,12 @@ header nav a {
 
 #menu a {
     display: block;
-    /* This makes the menu vertical */
 }
 
 #menu {
     list-style-type: none;
     transition: transform .3s;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     transform-origin: top right;
     background: white;
     width: 100%;
@@ -142,6 +139,7 @@ header nav a {
     align-content: center;
 }
 
+/*DETTE GØR BILLERNE I PORTFOLIO SORT/HVIDE - HOVER*/
 .col img {
     filter: gray;
     -webkit-filter: grayscale(100%);
@@ -161,7 +159,7 @@ header nav a {
 }
 
 .cv_billede {
-    background-image: url(billeder/ommig.svg);
+    background-image: url(billeder/ommig.png);
     width: 76vw;
     height: 30vw;
     background-size: cover;
@@ -205,7 +203,7 @@ header nav a {
     padding: 15px;
 }
 
-/*ÅBEN BOKS I CV*/
+/*ÅBEN BOKS I CV - PETER LIND*/
 #box {
     background-color: #d3c9bd;
     position: relative;
@@ -225,7 +223,6 @@ header nav a {
     transition: max-height 1s ease-in;
 }
 
-
 /*Laver indhold vha css*/
 #box.lille span:after {
     content: "+";
@@ -234,7 +231,6 @@ header nav a {
 span:after {
     content: "-";
 }
-
 
 #mere .plus {
     /*    for at få den nærmere på bunden*/
@@ -251,7 +247,6 @@ span:after {
     height: 20px;
     background: white;
 }
-
 
 .brunt_overlay {
     /* for at få gradientbaggrunden til at fylde*/
@@ -270,56 +265,54 @@ span:after {
 
     /*    for at placere plusset i midten*/
     text-align: center;
-
 }
 
-/*ANDET*/
+/*TEKST OG ANDET*/
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #675e53;
+    margin: 15px;
+}
 
 h1 {
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #8d7f70;
 }
 
 h2 {
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #8d7f70;
 }
 
 h3 {
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #b1a290;
 }
 
 h4 {
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #b1a290;
 }
 
-p {
-    font-family: sans-serif;
-    color: #675e53;
-    /*letter-spacing: 2px;*/
-}
-
-a {
-    text-decoration: none;
-    font-family: sans-serif;
-    color: #c9b8a6;
+#indhold a {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ea9ded;
+    display: block;
 }
 
 li {
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #4d4842;
     list-style-type: none;
     line-height: 2;
-
 }
 
-/*SOMMERSURF*/
+/*ALT INDHOLD PÅ UNDERSIDER*/
 #indhold .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
@@ -347,14 +340,7 @@ li {
     align-content: center;
 }
 
-@media only screen and (min-width: 700px) {
-
-    .content {
-        margin: 2;
-        align-content: center;
-    }
-}
-
+/*FOOTER*/
 footer {
     background-color: rgba(159, 144, 125, 0.59);
     color: #8d7f70;
@@ -368,6 +354,14 @@ footer {
     margin: 0 auto;
 }
 
+/*MEDIA Q TIL MIN WIDTH PÅ SKÆRMEN*/
+@media only screen and (min-width: 700px) {
+
+    .content {
+        margin: 2px;
+        align-content: center;
+    }
+}
 
 /* Bugfix - TUTOR FRA KANTINEN*/
 @media only screen and (min-width: 700px) {
