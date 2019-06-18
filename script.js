@@ -9,13 +9,17 @@ function sidenVises() {
 
 function toggleMenu() {
     console.log("toggleMenu");
-    document.querySelector("#menu").classList.toggle("hidden");
+
 
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
-    if (erSkjult == true) {
+    if (erSkjult != true) {
+        console.log("true");
+        document.querySelector("#menu").classList.add("hidden");
         document.querySelector("#menuknap").textContent = "☰";
     } else {
+        console.log("false");
+        document.querySelector("#menu").classList.remove("hidden");
         document.querySelector("#menuknap").textContent = "X";
     }
 }

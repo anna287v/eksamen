@@ -28,10 +28,6 @@ header nav a:active {
     color: #9f907d;
 }
 
-.hidden {
-    transform: translateX(100%);
-    opacity: 0;
-}
 
 header {
     width: 100%;
@@ -53,6 +49,8 @@ header nav a {
     padding: 7px;
     text-align: center;
     flex-direction: row;
+    background-color: white;
+    display: block;
 }
 
 #menuknap {
@@ -72,6 +70,15 @@ header nav a {
     transition: transform .3s;
     font-family: sans-serif;
     transform-origin: top right;
+    background: white;
+    width: 100%;
+    display: inline-block;
+    transform: translateX(0%);
+}
+
+#menu.hidden {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 @media only screen and (min-width: 700px) {
@@ -98,7 +105,7 @@ header nav a {
     height: 100vh;
     background-image: url(billeder/splash.png);
     background-size: cover;
-    background-position: 20%;
+    background-position: 18%;
     max-width: none;
 }
 
@@ -115,6 +122,7 @@ header nav a {
     background-size: cover;
     max-width: none;
     align-content: center;
+    margin-left: 11vw;
 }
 
 #portfolio .sectionwrapper {
@@ -154,11 +162,12 @@ header nav a {
 
 .cv_billede {
     background-image: url(billeder/ommig.svg);
-    background-size: 100%;
     width: 76vw;
     height: 30vw;
     background-size: cover;
-    margin-left: -40px;
+    max-width: none;
+    align-content: center;
+    margin-left: 11vw;
 }
 
 #cv .box {
@@ -185,9 +194,8 @@ header nav a {
 
 #cv .col1 {
     flex-basis: 300px;
-    flex-grow: 1;
-    margin: 20px;
-    padding: 15px;
+    flex-grow: 3;
+    margin-right: 20px;
 }
 
 #cv .col2 {
@@ -197,11 +205,75 @@ header nav a {
     padding: 15px;
 }
 
-#cv p {
-    font-family: sans-serif;
-    color: #9f907d;
-    justify-content: center;
+/*ÅBEN BOKS I CV*/
+#box {
+    background-color: #d3c9bd;
+    position: relative;
+    padding: 15px 10px 20px;
+    flex-basis: 300px;
+    flex-grow: 3;
 }
+
+#box.lille {
+    overflow: hidden;
+    max-height: 250px;
+    transition: max-height 0.5s ease-out;
+}
+
+#box.stor {
+    max-height: 3000px;
+    transition: max-height 1s ease-in;
+}
+
+
+/*Laver indhold vha css*/
+#box.lille span:after {
+    content: "+";
+}
+
+span:after {
+    content: "-";
+}
+
+
+#mere .plus {
+    /*    for at få den nærmere på bunden*/
+    margin-top: 40px;
+
+    /*    for at undgå at den opfører sit som et blockelement, og fylder hele bredden. */
+    /*    Derved sikrer jeg at jeg kan bruge parrent text-align: center */
+    display: inline-block;
+
+    /*    selve plussets farve og størrelse samt baggrund*/
+    color: #817667;
+    font-weight: 800;
+    width: 20px;
+    height: 20px;
+    background: white;
+}
+
+
+.brunt_overlay {
+    /* for at få gradientbaggrunden til at fylde*/
+    height: 60px;
+    margin: 0;
+
+    /* for at placere gradientbaggrunden i bunden */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*    For at sikre at den fylder hele sin parent ud i bredden*/
+    width: 100%;
+
+    /*    selve gradienten*/
+    background: linear-gradient(rgba(159, 144, 125, 0), #9f907d);
+
+    /*    for at placere plusset i midten*/
+    text-align: center;
+
+}
+
+/*ANDET*/
 
 h1 {
     text-align: center;
@@ -239,6 +311,14 @@ a {
     color: #c9b8a6;
 }
 
+li {
+    font-family: sans-serif;
+    color: #4d4842;
+    list-style-type: none;
+    line-height: 2;
+
+}
+
 /*SOMMERSURF*/
 #indhold .sectionwrapper {
     display: flex;
@@ -250,7 +330,7 @@ a {
 #indhold .image {
     flex-basis: 100px;
     flex-grow: 1;
-    margin: 10px;
+    margin: 15px;
 }
 
 #indhold .content {
@@ -262,10 +342,38 @@ a {
     margin: 0 auto;
 }
 
+#indhold .video video {
+    width: 50vw;
+    align-content: center;
+}
+
 @media only screen and (min-width: 700px) {
 
     .content {
         margin: 2;
         align-content: center;
+    }
+}
+
+footer {
+    background-color: rgba(159, 144, 125, 0.59);
+    color: #8d7f70;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+section,
+footer {
+    margin: 0 auto;
+}
+
+
+/* Bugfix - TUTOR FRA KANTINEN*/
+@media only screen and (min-width: 700px) {
+
+    #menu.hidden {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }
